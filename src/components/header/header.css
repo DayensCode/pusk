@@ -1,6 +1,6 @@
 .header {
 	position: relative;
-	background-image: url('./img/background.svg');
+	background-image: url('./../../img/background.svg');
 	background-repeat: no-repeat;
 	background-position: top right;
 }
