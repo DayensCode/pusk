@@ -1,0 +1,50 @@
+.header {
+	position: relative;
+	background-image: url('./img/background.svg');
+	background-repeat: no-repeat;
+	background-position: top right;
+}
+
+.header__wrapper {
+	padding: 296px 0 581px;
+	height: 900px;
+}
+
+.header__signature {
+	color: var(--muted);
+	font-size: 24px;
+	line-height: calc(110/24);
+}
+
+.header__title {
+	font-family: 'Helvetica Neue', sans-serif;
+	font-weight: 700;
+	font-size: 80px;
+	line-height: calc(88/80);
+	letter-spacing: 0.01em;
+}
+
+.header__row {
+	padding: 27px 0 27px;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+
+	background: linear-gradient(to right, rgba(4, 4, 4, 0.1), rgba(16, 44, 43, 0.1));
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(16px);
+}
+
+.header__list {
+	display: flex;
+	column-gap: 60px;
+}
+
+.header__list a {
+	font-weight: 600;
+	font-size: 16px;
+	color: var(--text);
+	line-height: calc(24/16);
+	letter-spacing: -0.01em;
+}

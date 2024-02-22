@@ -1,0 +1,40 @@
+:root {
+	--text: #FFFFFF;
+	--accent: #40FFE4;
+	--muted: #D1D1D1;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
+	color: var(--text);
+
+	background-color: #000000;
+}
+
+.container {
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0 112px;
+}
+
+.container--flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+.reused-title {
+	font-family: 'Helvetica Neue';
+	font-weight: 700;
+	font-size: 60px;
+	line-height: calc(64/60);
+	letter-spacing: -0.01em;
+	margin-bottom: 40px;
+}
+
+.reused-signature {
+	font-size: 18px;
+	line-height: calc(18/24);
+	letter-spacing: -0.01em;
+	color: var(--muted);
+}

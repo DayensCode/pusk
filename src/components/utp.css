@@ -1,0 +1,17 @@
+.utp {
+	position: relative;
+	padding-bottom: 260px;
+	text-align: center;
+}
+
+.utp__background {
+	position: absolute;
+	top: -700px;
+	overflow: hidden;
+	width: 100%;
+	z-index: -1;
+}
+
+.utp__background img {
+	transform: translate(35%, 0%);
+}
