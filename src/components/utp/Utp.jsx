@@ -8,7 +8,7 @@ const Utp = () => {
 				<img src={backgroundImage} alt="image"/>
 			</div>
 			<div className="container">
-				<h2 className="reused-title">Pusk — инструмент,<br /> который доступен всем</h2>
+				<h2 className="reused-title utp__title">Pusk — инструмент,<br /> который доступен всем</h2>
 				<span className="reused-signature">Наше приложение — это десятки микросервисов, доступных в одном экране, в привычном и удобном тебе дизайне</span>
 			</div>
 		</section>

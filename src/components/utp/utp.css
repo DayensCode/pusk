@@ -15,3 +15,7 @@
 .utp__background img {
 	transform: translate(35%, 0%);
 }
+
+.utp__title {
+	margin-bottom: 40px;
+}
