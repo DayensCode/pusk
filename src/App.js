@@ -6,10 +6,13 @@ import Vacancy from "./pages/Vacancy";
 import Contacts from "./pages/Contacts";
 import Job from "./pages/Job";
 
+import ScrollToTop from "./utils/scrollToTop";
+
 function App() {
   return (
     <div className="App">
       <Router>
+        <ScrollToTop />
         <Header />
 
 

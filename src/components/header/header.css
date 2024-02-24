@@ -41,10 +41,14 @@
 	column-gap: 60px;
 }
 
-.header__list a {
+.header__link {
 	font-weight: 600;
 	font-size: 16px;
 	color: var(--text);
 	line-height: calc(24/16);
 	letter-spacing: -0.01em;
+}
+
+.header__link--active {
+	border-bottom: 1px solid #FFFFFF;
 }

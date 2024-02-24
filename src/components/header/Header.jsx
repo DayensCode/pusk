@@ -1,7 +1,12 @@
 import './header.css';
 import logo from "./../../img/logo.svg";
 
+import { NavLink } from 'react-router-dom';
+
 const Header = () => {
+	const normalLink = "header__link";
+	const activeLink = "header__link header__link--active";
+
 	return (
       <header className="header">
 			<div className="container">
@@ -13,14 +18,21 @@ const Header = () => {
 
 					<div className="header__row">
 						<div className="container container--flex">
-							<a href="/">
+							<NavLink to="/">
 								<img src={logo} alt="logo" className="header__logo" />
-							</a>
+							</NavLink>
+
 							<nav className="header__nav">
 								<ul className="header__list">
-									<li><a href="/">Главная</a></li>
-									<li><a href="#">Вакансии</a></li>
-									<li><a href="#">Контакты</a></li>
+									<li>
+										<NavLink to="/" className={({isActive}) => isActive ? activeLink : normalLink}>Главная</NavLink>
+									</li>
+									<li>
+										<NavLink to="/vacancy" className={({isActive}) => isActive ? activeLink : normalLink}>Вакансии</NavLink>
+									</li>
+									<li>
+										<NavLink to="/contacts" className={({isActive}) => isActive ? activeLink : normalLink}>Контакты</NavLink>
+									</li>
 								</ul>
 							</nav>
 						</div>
