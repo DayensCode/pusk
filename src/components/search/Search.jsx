@@ -13,7 +13,7 @@ const Search = () => {
 				<h2 className="reused-title search__title">Кого ищем сейчас</h2>
 				<ul className="search__list">
 					{searchList.map((item) => {
-						return <Card key={item.id} title={item.title} pay={item.pay} experience={item.experience} workFormat={item.workFormat} dutiesFirst={item.dutiesFirst} dutiesSecond={item.dutiesSecond} />
+						return <Card key={item.id} id={item.id} title={item.title} pay={item.pay} experience={item.experience} workFormat={item.workFormat} dutiesFirst={item.dutiesFirst} dutiesSecond={item.dutiesSecond} />
 					})}
 				</ul>
 			</div>

@@ -2,6 +2,8 @@
 	--text: #FFFFFF;
 	--accent: #40FFE4;
 	--muted: #D1D1D1;
+
+	--marker: #FFFFFF;
 }
 
 body {
@@ -10,6 +12,20 @@ body {
 	color: var(--text);
 
 	background-color: #000000;
+}
+
+.light {
+	color: #000000;
+
+	background-color: var(--text);
+}
+
+.link--dark {
+	color: #000000;
+}
+
+.muted {
+	color: #5E5E5E !important;
 }
 
 .container {

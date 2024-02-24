@@ -1,18 +1,69 @@
+import { useEffect, useRef, useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
+
 import './header.css';
 import logo from "./../../img/logo.svg";
+import moon from "./../../img/moon.svg";
+import sun from "./../../img/sun.svg";
 
-import { NavLink } from 'react-router-dom';
 
 const Header = () => {
-	const normalLink = "header__link";
-	const activeLink = "header__link header__link--active";
+	const normalLink = "link header__link";
+	const activeLink = "link header__link header__link--active";
+
+	const { pathname } =  useLocation();
+
+	const themeButton = useRef(null); 
+
+	const [ themeMode, setThemeMode ] = useState('dark');
+
+	useEffect(() => {
+
+		const conditions = document.querySelectorAll('.card__condition');
+		const subtitles = document.querySelectorAll('.card__subtitle');
+
+		const markers = document.querySelectorAll('.card__dutie');
+		const infoMarkers = document.querySelectorAll('.info__offer');
+		const header = document.querySelector('.header__row');
+		const muteds = document.querySelectorAll('[id="muted"]');
+
+		if (themeMode === 'dark') {
+			themeButton.current.classList.add('header__button--dark');
+			document.body.classList.remove('light');
+
+			conditions.forEach((link) => link.classList.remove('link--dark'));
+			subtitles.forEach((link) => link.classList.remove('link--dark'));
+			muteds.forEach((link) => link.classList.remove('muted'));
+
+			markers.forEach((marker) => marker.style.setProperty('--marker','#FFFFFF'));
+			infoMarkers.forEach((marker) => marker.style.setProperty('--marker','#FFFFFF'));
+			header.classList.remove('header__row--light');
+		} else {
+			themeButton.current.classList.remove('header__button--dark');
+			document.body.classList.add('light');
+
+			conditions.forEach((link) => link.classList.add('link--dark'));
+			subtitles.forEach((link) => link.classList.add('link--dark'));
+			muteds.forEach((link) => link.classList.add('muted'));
+
+			markers.forEach((marker) => marker.style.setProperty('--marker','#000000'));
+			infoMarkers.forEach((marker) => marker.style.setProperty('--marker','#000000'));
+			header.classList.add('header__row--light');
+		}
+
+	},[themeMode, pathname]) //если менется путь то эффект отрабатывает по новой(смотрит актулаьное состояние темы и добавляет/удаляет все необходимые классы)
+
+	function toggleThemeButton() {
+		setThemeMode((currentTheme) => {
+			return currentTheme === 'dark' ? 'light' : 'dark';
+		})
+	}
 
 	return (
       <header className="header">
 			<div className="container">
 				<div className="header__wrapper">
-
-					<span className="header__signature">Криптокошелёк pusk</span>
+					<span className="header__signature" id="muted">Криптокошелёк pusk</span>
 					<h1 className="header__title">Криптомир, который был адаптирован для тебя</h1>
 
 
@@ -30,10 +81,11 @@ const Header = () => {
 									<li>
 										<NavLink to="/vacancy" className={({isActive}) => isActive ? activeLink : normalLink}>Вакансии</NavLink>
 									</li>
-									<li>
-										<NavLink to="/contacts" className={({isActive}) => isActive ? activeLink : normalLink}>Контакты</NavLink>
-									</li>
 								</ul>
+								<button ref={themeButton} className="header__button" onClick={toggleThemeButton}>
+									<img src={sun} alt="image" className="header__button-icon" />
+									<img src={moon} alt="image" className="header__button-icon" />
+								</button>
 							</nav>
 						</div>
 					</div>
