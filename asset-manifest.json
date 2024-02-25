@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/pusk/static/css/main.38c15f48.css",
-    "main.js": "/pusk/static/js/main.0083cba9.js",
+    "main.css": "/pusk/static/css/main.89609a2a.css",
+    "main.js": "/pusk/static/js/main.927fbac9.js",
     "static/media/gradient-background.svg": "/pusk/static/media/gradient-background.6377950f08f29bb109020792d730ae1f.svg",
     "static/media/background.svg": "/pusk/static/media/background.32c7b8a6ddceeb6aa4983d706a5c5c73.svg",
     "static/media/background-vacancy.svg": "/pusk/static/media/background-vacancy.21cb93bfbdebbddeb5d942e19154cc44.svg",
@@ -10,11 +10,11 @@
     "static/media/sun.svg": "/pusk/static/media/sun.4d47962acd6c83e7e7aca592ec39545f.svg",
     "static/media/moon.svg": "/pusk/static/media/moon.829f022e764b1d37016e364c5447dfdb.svg",
     "index.html": "/pusk/index.html",
-    "main.38c15f48.css.map": "/pusk/static/css/main.38c15f48.css.map",
-    "main.0083cba9.js.map": "/pusk/static/js/main.0083cba9.js.map"
+    "main.89609a2a.css.map": "/pusk/static/css/main.89609a2a.css.map",
+    "main.927fbac9.js.map": "/pusk/static/js/main.927fbac9.js.map"
   },
   "entrypoints": [
-    "static/css/main.38c15f48.css",
-    "static/js/main.0083cba9.js"
+    "static/css/main.89609a2a.css",
+    "static/js/main.927fbac9.js"
   ]
 }
