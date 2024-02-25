@@ -93,9 +93,9 @@
 	margin-top: 60px;
 	padding: 20px 60px;
 
-	transition: opacity .3s ease-in;
+	transition: all .3s ease-in;
 }
 
 .card__button:hover {
-	opacity: .7;
+	background-color: #19DABE;
 }

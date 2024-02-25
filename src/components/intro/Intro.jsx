@@ -14,7 +14,7 @@ const Intro = ({title, centeredTitle, signatureVacancy, signatureHome, pay, form
 	useEffect(() => {
 
 		if (pathname === '/vacancy') {
-			backgroundElement.current.style.setProperty("padding", "340px 0 260px");
+			backgroundElement.current.style.setProperty("padding", "340px 0 290px");
 			backgroundElement.current.style.setProperty("text-align", "center");
 			backgroundElement.current.style.setProperty("background-image",`url(${backgroundImageVacancy})`);
 		} else if (pathname === '/') {
