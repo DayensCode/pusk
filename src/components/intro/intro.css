@@ -1,0 +1,50 @@
+.intro {
+	background-repeat: no-repeat;
+	background-position: top right;
+	padding: 296px 0 386px;
+}
+
+.intro__signature {
+	color: var(--muted);
+	font-size: 24px;
+	line-height: calc(110/24);
+}
+
+.intro__vacancy-title {
+	margin-bottom: 40px;
+}
+
+.intro__job-title {
+	margin-bottom: 70px;
+}
+
+.intro__title {
+	font-family: 'Helvetica Neue', sans-serif;
+	font-weight: 700;
+	font-size: 80px;
+	line-height: calc(88/80);
+	letter-spacing: 0.01em;
+}
+
+.intro__job-conditions {
+	display: flex;
+	flex-direction: column;
+	gap: 28px;
+}
+
+.intro__job-condition {
+	display: flex;
+	flex-direction: column;
+	font-size: 18px;
+	line-height: calc(24/18);
+	letter-spacing: -0.01em;
+	color: var(--muted)
+}
+
+.intro__job-value {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: calc(24/20);
+	letter-spacing: -0.01em;
+	color: var(--text);
+}

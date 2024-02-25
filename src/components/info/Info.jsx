@@ -1,22 +1,13 @@
-import { useParams } from "react-router-dom";
 import './info.css';
-import { searchList } from './../../helpers/searchList';
 
-const Info = () => {
-	const {id} = useParams();
-
-	function findCard() {
-		return searchList.find(item => item.id == id)
-	}
-	const card = findCard();
-
+const Info = ({card}) => {
 	return (
 		<section className="info">
 			<div className="container">
 				<span className="info__subtitle">Описание вакансии</span>
 				<div className="info__wrapper">
 					<h3 className="info__title">О вакансии</h3>
-					<p className="info__paragraph" id="muted">{card.about}</p>
+					<p className="info__paragraph" id="muted">Международный it холдинг, ищет в свою команду {card.title}. Мы растем, развиваемся и сейчас в поисках новых сотрудников/коллег/друзей... Мы работаем в сегменте Fintech/Blockchain и готовы к покорению новых вершин. В нашей команде не хватает именно Тебя! Опытного и активного специалиста, которому интересно заниматься развитием, продвижением IT продукта.**</p>
 					<h3 className="info__title">Задачи</h3>
 					<p className="info__paragraph" id="muted">{card.tasks}</p>
 					<h3 className="info__title">Будет преимуществом</h3>

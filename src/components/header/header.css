@@ -1,32 +1,7 @@
 .header {
-	position: relative;
-	background-image: url('./../../img/background.svg');
-	background-repeat: no-repeat;
-	background-position: top right;
-}
-
-.header__wrapper {
-	padding: 296px 0 581px;
-	height: 900px;
-}
-
-.header__signature {
-	color: var(--muted);
-	font-size: 24px;
-	line-height: calc(110/24);
-}
-
-.header__title {
-	font-family: 'Helvetica Neue', sans-serif;
-	font-weight: 700;
-	font-size: 80px;
-	line-height: calc(88/80);
-	letter-spacing: 0.01em;
-}
-
-.header__row {
-	padding: 27px 0 27px;
-	position: absolute;
+	z-index: 1;
+	padding: 27px 0;
+	position: fixed;
 	width: 100%;
 	top: 0;
 	left: 0;
@@ -36,7 +11,7 @@
 	backdrop-filter: blur(16px);
 }
 
-.header__row--light {
+.header--light {
 	background: linear-gradient(to right, rgba(4, 4, 4, 0.4), rgba(16, 44, 43, 0.4));
 }
 

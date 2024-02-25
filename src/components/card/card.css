@@ -92,4 +92,10 @@
 	background-color: var(--accent);
 	margin-top: 60px;
 	padding: 20px 60px;
+
+	transition: opacity .3s ease-in;
+}
+
+.card__button:hover {
+	opacity: .7;
 }

@@ -19,12 +19,12 @@ const Header = () => {
 
 	useEffect(() => {
 
-		const conditions = document.querySelectorAll('.card__condition');
+		const conditions = document.querySelectorAll('.card__condition, .intro__job-value');
 		const subtitles = document.querySelectorAll('.card__subtitle');
 
 		const markers = document.querySelectorAll('.card__dutie');
 		const infoMarkers = document.querySelectorAll('.info__offer');
-		const header = document.querySelector('.header__row');
+		const header = document.querySelector('.header');
 		const muteds = document.querySelectorAll('[id="muted"]');
 
 		if (themeMode === 'dark') {
@@ -37,7 +37,7 @@ const Header = () => {
 
 			markers.forEach((marker) => marker.style.setProperty('--marker','#FFFFFF'));
 			infoMarkers.forEach((marker) => marker.style.setProperty('--marker','#FFFFFF'));
-			header.classList.remove('header__row--light');
+			header.classList.remove('header--light');
 		} else {
 			themeButton.current.classList.remove('header__button--dark');
 			document.body.classList.add('light');
@@ -48,7 +48,7 @@ const Header = () => {
 
 			markers.forEach((marker) => marker.style.setProperty('--marker','#000000'));
 			infoMarkers.forEach((marker) => marker.style.setProperty('--marker','#000000'));
-			header.classList.add('header__row--light');
+			header.classList.add('header--light');
 		}
 
 	},[themeMode, pathname]) //если менется путь то эффект отрабатывает по новой(смотрит актулаьное состояние темы и добавляет/удаляет все необходимые классы)
@@ -60,37 +60,26 @@ const Header = () => {
 	}
 
 	return (
-      <header className="header">
-			<div className="container">
-				<div className="header__wrapper">
-					<span className="header__signature" id="muted">Криптокошелёк pusk</span>
-					<h1 className="header__title">Криптомир, который был адаптирован для тебя</h1>
+		<header className="header">
+			<div className="container container--flex">
+				<NavLink to="/">
+					<img src={logo} alt="logo" className="header__logo" />
+				</NavLink>
 
-
-					<div className="header__row">
-						<div className="container container--flex">
-							<NavLink to="/">
-								<img src={logo} alt="logo" className="header__logo" />
-							</NavLink>
-
-							<nav className="header__nav">
-								<ul className="header__list">
-									<li>
-										<NavLink to="/" className={({isActive}) => isActive ? activeLink : normalLink}>Главная</NavLink>
-									</li>
-									<li>
-										<NavLink to="/vacancy" className={({isActive}) => isActive ? activeLink : normalLink}>Вакансии</NavLink>
-									</li>
-								</ul>
-								<button ref={themeButton} className="header__button" onClick={toggleThemeButton}>
-									<img src={sun} alt="image" className="header__button-icon" />
-									<img src={moon} alt="image" className="header__button-icon" />
-								</button>
-							</nav>
-						</div>
-					</div>
-
-				</div>
+				<nav className="header__nav">
+					<ul className="header__list">
+						<li>
+							<NavLink to="/" className={({isActive}) => isActive ? activeLink : normalLink}>Главная</NavLink>
+						</li>
+						<li>
+							<NavLink to="/vacancy" className={({isActive}) => isActive ? activeLink : normalLink}>Вакансии</NavLink>
+						</li>
+					</ul>
+					<button ref={themeButton} className="header__button" onClick={toggleThemeButton}>
+						<img src={sun} alt="image" className="header__button-icon" />
+						<img src={moon} alt="image" className="header__button-icon" />
+					</button>
+				</nav>
 			</div>
 		</header>
 	);

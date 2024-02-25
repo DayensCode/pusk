@@ -28,6 +28,10 @@ body {
 	color: #5E5E5E !important;
 }
 
+.none {
+	display: none;
+}
+
 .container {
 	max-width: 1440px;
 	margin: 0 auto;
@@ -40,7 +44,7 @@ body {
 }
 
 .reused-title {
-	font-family: 'Helvetica Neue';
+	font-family: 'Helvetica Neue', sans-serif;
 	font-weight: 700;
 	font-size: 60px;
 	line-height: calc(64/60);
